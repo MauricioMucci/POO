@@ -5,6 +5,7 @@ public class SistemaBanco {
         
         Conta pessoaA,pessoaB;
 
+        // Instancia o objeto
         pessoaA = new Conta(1,"Lucas Dias",1500,750);
         pessoaB = new Conta(2,"Mauricio Mucci",2500,1000);
 

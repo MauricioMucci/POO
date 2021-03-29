@@ -6,8 +6,8 @@ public class Conta {
     String dono;
     double saldo,limite;
 
-    //Instanciacao
-    public Conta(int numero, String dono,double saldo, double limite){
+    //Construtor
+    Conta(int numero, String dono,double saldo, double limite){
         this.numero = numero;
         this.dono = dono;
         this.saldo = saldo;
