@@ -28,7 +28,7 @@ public class Conta {
     }
 
     boolean saca(double valor) {
-        if ((this.saldo < valor) && (lim(valor))) {
+        if (lim(valor)) {
             return false;
         } else {
             this.saldo = this.saldo - valor;
@@ -37,7 +37,7 @@ public class Conta {
     }
     
     boolean lim (double valor) {
-        if (valor > this.limite) {
+        if (valor <= (this.limite + this.saldo)) {
             return false;
         } else {
             return true;

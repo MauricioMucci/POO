@@ -12,12 +12,12 @@ public class SistemaBanco {
         pessoaB.saca(200);
 
         System.out.printf("Dono: %s\n", pessoaA.getDono());
-        System.out.printf("Saldo: %2f\n", pessoaA.getSaldo());
+        System.out.printf("Saldo: %2f\n\n", pessoaA.getSaldo());
 
         System.out.printf("Dono: %s\n", pessoaB.getDono());
-        System.out.printf("Saldo: %2f\n", pessoaB.getSaldo());
+        System.out.printf("Saldo: %2f\n\n", pessoaB.getSaldo());
         
-        pessoaB.transfere(450, pessoaA);
+        pessoaB.transfere(3300, pessoaA);
 
         pessoaA.imprime();
         pessoaB.imprime();
