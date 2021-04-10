@@ -1,0 +1,14 @@
+1. Qual a diferença entre classe e objeto?
+
+Classes são estruturas das linguagens de POO que contém atributos e 
+métodos, enquanto um objeto é uma materialização da classe.
+
+2. Qual a finalidade de um método construtor? É possível criar dois 
+construtores na mesma classe?
+
+São utilizados na inicialização dos atributos de uma classe. Sim é 
+possível.
+
+3. O que é um método estático?
+
+São operações que não pertecem ao objeto,mas sim a classe.
