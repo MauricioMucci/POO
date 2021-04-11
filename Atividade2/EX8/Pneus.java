@@ -4,13 +4,13 @@ public class Pneus {
     private int preco;
     private String tipo, fabricante;
 
-    public Pneus(int preco, String tipo, String fabricante){
-        this.setPreco(preco);
-        this.setTipo(tipo);
-        this.setFabricante(fabricante);
-    }
     public Pneus(){
-        this(0,"","");
+    }
+    
+    public Pneus(int preco, String tipo, String fabricante){
+        this.preco = preco;
+        this.tipo = tipo;
+        this.fabricante = fabricante;
     }
 
     public int getPreco() {
@@ -35,5 +35,10 @@ public class Pneus {
 
     public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
+    }
+
+    public String toString(){
+        String str = "Descricao:\nR$" + String.valueOf(this.preco) + "\nTipo: " + this.tipo + "\nFabricante: " + this.fabricante + "\n";
+        return str;
     }
 }

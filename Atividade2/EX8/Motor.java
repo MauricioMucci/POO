@@ -4,13 +4,14 @@ public class Motor {
     private int potencia, preco;
     private String fabricante;
 
-    public Motor(int potencia, int preco, String fabricante){
-        this.setPreco(preco);
-        this.setPotencia(potencia);
-        this.setFabricante(fabricante);
-    }
+
     public Motor(){
-        this(0,0,"");
+    }
+
+    public Motor(int potencia, int preco, String fabricante){
+        this.preco = preco;
+        this.potencia = potencia;
+        this.fabricante = fabricante;
     }
 
     public int getPreco() {
@@ -35,5 +36,10 @@ public class Motor {
 
     public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
+    }
+
+    public String toString(){
+        String str = "Descricao:\nR$" + String.valueOf(this.preco) + "\nPotencia: " + String.valueOf(this.potencia) + "\nFabricante: " + this.fabricante + "\n";
+        return str;
     }
 }

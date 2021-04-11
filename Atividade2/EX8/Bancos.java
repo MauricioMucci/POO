@@ -4,13 +4,13 @@ public class Bancos {
     private int preco;
     private String modelo, fabricante;
 
-    public Bancos(int preco, String modelo, String fabricante){
-        this.setPreco(preco);
-        this.setModelo(modelo);
-        this.setFabricante(fabricante);
-    }
     public Bancos(){
-        this(0,"","");
+    }
+
+    public Bancos(int preco, String modelo, String fabricante){
+        this.preco = preco;
+        this.modelo = modelo;
+        this.fabricante = fabricante;
     }
 
     public int getPreco() {
@@ -35,5 +35,10 @@ public class Bancos {
 
     public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
+    }
+
+    public String toString(){
+        String str = "Descricao:\nR$" + String.valueOf(this.preco) + "\nModelo: " + this.modelo + "\nFabricante: " + this.fabricante + "\n";
+        return str;
     }
 }
