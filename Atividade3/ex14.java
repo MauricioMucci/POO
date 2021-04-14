@@ -3,7 +3,6 @@ package Atividade3;
 public class ex14 {
     public static void main(String[] args) {
         int [][] a, b, c;
-        int multiplicacao, soma;
 
         a = new int[5][4];
         for (int i = 0; i < 5; i++) {
