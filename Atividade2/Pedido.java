@@ -35,6 +35,10 @@ public class Pedido {
         return this.descricao;
     }
 
+    public int getCodigo() {
+        return this.codigo;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }

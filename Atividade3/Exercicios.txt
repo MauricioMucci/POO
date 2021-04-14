@@ -1,0 +1,63 @@
+1. O uso de encapsulamento (public, private, ...) permite que classes escondam os seus atributos e o funcionamento 
+dos seus métodos. No exemplo acima, a classe Principal usa o método mudaCPF sem ter conhecimento do seu funcionamento.
+Ocultar o funcionamento é uma boa característica? Explique.
+
+Obs: O uso de encapsulamento é importante porque futuramente se a forma de validação de CPF necessitar ser alterada,
+basta alterar o método validaCPF (Sem alterar nada na classe Principal). Essa ideia está clara?
+
+R: Encapsular é fundamental para que seu sistema seja suscetível a mudanças: não precisaremos mudar uma regra de negócio
+em vários lugares, mas sim em apenas um único lugar, já que essa regra está encapsulada. Cada classe é responsável por 
+controlar seus atributos, portanto ela deve julgar se aquele novo valor é válido ou não! Esta validação não deve ser 
+controlada por quem está usando a classe e sim por ela mesma, centralizando essa responsabilidade e facilitando futuras 
+mudanças no sistema
+
+2. Por que o compilador acusa erro nas duas últimas linhas da classe Principal? É possível corrigir?
+
+R: Porque o atributo cpf é privado. Sim, para permitir o acesso aos atributos (já que eles são private) de uma maneira 
+controlada, a prática mais comum é criar dois métodos, um que retorna o valor e outro que muda o valor (getters e setters). 
+Utilizar getters e setters não só ajuda você a proteger seus atributos, como também possibilita ter de mudar algo em um só lugar
+
+3. Tem sentido os modificadores de acesso (public e private) utilizados na classe Cliente? Poderíamos alterar algum deles
+para melhorar a modelagem do sistema proposto?
+
+R: Sim. Nesse momento não
+
+
+4. O método validaCPF pode ser acessado diretamente na classe Principal? Faz sentido alterar o modificador de acesso?
+Explique.
+
+R: Não. Não, pois não é "dever" da classe principal validar o cpf. 
+
+5. O que faz o comando “cpf.length()”?
+
+R: Devolve o tamanho da String cpf.
+
+6. Se o método “public static void main(String []args)” fosse implementado dentro da classe Cliente, eliminando a classe
+Principal. Teríamos alguma diferença? Explique.
+
+R: Sim pois qualque Cliente teria acesso a validação de cpf.
+
+7. Note que quando declaramos um atributo como static, ele passa a não ser mais um atributo de cada objeto, e sim um
+atributo da classe, a informação fica guardada pela classe, não é mais individual para o objeto. Em outras palavras, 
+métodos e atributos estáticos só podem acessar outros métodos e atributos estáticos da mesma classe, o que faz todo 
+sentido já que dentro de um método estático não temos acesso à referência this, pois um método estático é chamado 
+através da classe, e não de um objeto.
+
+OBS.: o outro lado dos construtores: facilidade. Às vezes, criamos um construtor que recebe diversos argumentos para 
+não obrigar o usuário de uma classe a chamar diversos métodos do tipo 'set' .
+
+8. Construtor é um método? Pesquise e justifique.
+
+R: Um construtor não é um método. Algumas pessoas o chamam de um método especial, mas definitivamente não é, já que não 
+possui retorno e só é chamado durante a construção do objeto.
+
+9. É possível criar uma classe sem implementar construtor?
+
+R: Sim, quando você não declara nenhum construtor na sua classe, o Java cria um para você. Esse construtor é o construtor 
+default, ele não recebe nenhum argumento e o corpo dele é vazio. A partir do momento que você declara um construtor, o 
+construtor default não é mais fornecido.
+
+10. É obrigatório criar um getter e setter para cada atributo existente na classe? Para responder, leia a referência
+(http://blog.caelum.com.br/nao-aprender-oo-getters-e-setters/).
+
+R: Não, pois queremos apenas para os atributos que serão utilizados fora da classe.
