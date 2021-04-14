@@ -14,7 +14,7 @@ public class Carro {
     public Carro(Pneus a,Motor b,Bancos c){
         this.a = a;
         this.b = b;
-        this.c = c;
+        this.c = c; 
     }
 
     public void setPneu(int p, String t, String f){
