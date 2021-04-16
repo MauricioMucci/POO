@@ -11,8 +11,6 @@ public class Main {
         b.setSalario(1221.76);
         b.setMatricula("ABC987XYZ");
 
-        Empregado c = new Empregado("Mauricio", "Masculino", 20);
-
         Cliente d = new Cliente("Thais", "Feminino", 37, 1983);
         d.setValorDivida(57.99);
         
