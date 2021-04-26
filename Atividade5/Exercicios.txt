@@ -1,0 +1,97 @@
+Exercício 1.
+1. Considere o código abaixo que modela objetos de um jogo de guerra:
+
+class ObjetoVisual {
+float vida; // Varia entre 0, .25, .5, 1
+int pontuacao; // + 1 para cada acerto
+int pos_x; // Posicao no eixo x
+int pos_y; // Posicao no eixo y
+float largura; // Largura do objeto
+float altura; // Altura do objeto
+void desenha();
+}
+class Aviao extends ObjetoVisual {
+void movimenta (int x, int y) {
+pos_x = x;
+pos_y = y;
+}
+}
+
+a) Que mudança(s) precisamos fazer no código para que a classe Avião seja
+obrigada a redefinir o método desenha() da classe ObjetoVisual?
+
+R: Seria necessario transformar a classe ObjetoVisual em uma classe abstrata,
+e seu metodo desenha tambem.
+
+Exercício 2.
+1. No código abaixo temos a declaração de 3 classes: uma classe para inteiros
+( Inteiro ), outra para racionais ( Racional ), que estende a de inteiros, e uma classe
+para teste ( Teste ). Qual o valor impresso pelos 2 métodos print chamados pelo
+método main da classe Teste ? Explique seu raciocínio.
+
+R: 4/2 e 5/2. Isso acontece pois i recebe r de tipo Racional logo os metodos que serao utilizados
+serao da classe racional.
+
+class Inteiro {
+int a;
+Inteiro (int x) {
+a = x;
+}
+void add (int x) {
+a = a + x;
+}
+void inc () {
+a = a + 1;
+}
+void print () {
+System.out.println(a);
+}
+}
+class Racional extends Inteiro {int b;
+Racional (int x, int y) {
+super(x); b = y;
+}
+void add (Racional x) {
+a = a * x.b + b * x.a;
+b = b * x.b;
+}
+void inc () {
+a = a + b;
+}
+void print () {
+System.out.print(a);
+System.out.print("/");
+System.out.println(b);
+}
+}
+
+class Teste{
+public static void main(String[] a) {
+Inteiro i = new Inteiro(1);
+Racional r = new Racional(2,2);
+i = r;
+i.inc();
+i.print();
+i.add(1);
+i.print();
+}
+}
+
+Exercício 3.
+1. Uma classe abstrata pode ter métodos não-abstratos? Uma classe abstrata precisa ter
+métodos abstratos?
+
+R: Sim, ela pode. Não necessariamente
+
+2. Qual a diferença entre sobrecarregar (overload) e sobrepor (override) um método?
+
+R: sobrecarregar um metodo é quando métodos com mesmo nome possuem parametros com
+tipos diferentes, enquanto um sobrepor é quando os métodos de mesmo nome dentro de
+uma herança se sobrepẽe um sobre os outros (filha sobrepõe mãe). 
+
+3. O que são interfaces? O que elas podem conter? Qual sua relação com classes?
+
+R: Interface é a maneira através da qual conversamos com um objeto. 
+Não possui implementação, apenas assinatura, ou seja, apenas a definição dos 
+seus métodos sem o corpo. Seus métodos são implicitamente Públicos e Abstratos. 
+Não há como fazer uma instância de uma Interface e nem como criar um Construtor.
