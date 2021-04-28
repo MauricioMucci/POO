@@ -5,22 +5,20 @@ public class Main {
         
         Caixa a = new Caixa(2.5, 3.7, 4.0);
         Cilindro b = new Cilindro(1.7, 4.3);
-
-        Main c = new Main();
-
-        c.comparaArea(a, b);
-        c.comparaVolume(a, b);
+        
+        comparaArea(a,b);
+        comparaVolume(a, b);    
     }
-
-    public void comparaArea(Caixa a, Cilindro b){
+ 
+    private static void comparaArea(Caixa a, Cilindro b){
         if (a.getArea() < b.getArea()) {
             System.out.println("Area da caixa e menor\n");
         } else {
             System.out.println("Area do cilindro e menor\n");
         }
     }
-
-    public void comparaVolume(Caixa a, Cilindro b){
+ 
+    private static void comparaVolume(Caixa a, Cilindro b){
         if (a.getVolume() < b.getVolume()) {
             System.out.println("Volume da caixa e menor\n");
         } else {

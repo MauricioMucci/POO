@@ -1,5 +1,12 @@
 package EX5;
 
+/*
+    Suponha o código do programa abaixo:
+
+    Defina as classes, seus respectivos construtores e métodos, de forma que o código
+fornecido funcione.
+ */
+
 public class L8Q3 {
     public static void main(String[] args) {
         Agenda ag = new Agenda();
@@ -15,5 +22,5 @@ public class L8Q3 {
         c2.adicionaTelefone(new Telefone(55, 22, 99999999));
         ag.adicionaContato(c2);
         ag.imprimeContatos();
-        }
+    }
 }
