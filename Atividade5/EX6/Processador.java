@@ -1,4 +1,4 @@
-package EX6;
+package Atividade5.EX6;
 
 public class Processador implements Item {
     private int preco;

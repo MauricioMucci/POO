@@ -1,4 +1,4 @@
-package EX4;
+package Atividade5.EX4;
 
 public class Caixa extends Retangulo {
     private double altura;

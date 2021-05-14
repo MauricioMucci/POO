@@ -1,4 +1,4 @@
-package EX5;
+package Atividade5.EX5;
 
 /*
     Suponha o código do programa abaixo:

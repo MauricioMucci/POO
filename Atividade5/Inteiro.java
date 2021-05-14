@@ -1,3 +1,5 @@
+package Atividade5;
+
 public class Inteiro {
     int a;
     Inteiro (int x) {

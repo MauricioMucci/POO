@@ -1,4 +1,4 @@
-package EX6dif;
+package Atividade5.Rework;
 
 abstract class ItemMontado extends ItemAvulso {
     

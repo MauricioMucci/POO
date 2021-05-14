@@ -1,4 +1,4 @@
-package EX4;
+package Atividade5.EX4;
 
 abstract class Retangulo {
     protected double base1;

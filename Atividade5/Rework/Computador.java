@@ -1,4 +1,4 @@
-package EX6dif;
+package Atividade5.Rework;
 
 public class Computador extends ItemMontado {
     private int tipo = 0;

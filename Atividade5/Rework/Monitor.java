@@ -1,4 +1,4 @@
-package EX6dif;
+package Atividade5.Rework;
 
 public class Monitor extends ItemAvulso {
     private double polegadas;

@@ -1,4 +1,4 @@
-package EX6;
+package Atividade5.EX6;
 
 public class Gabinete implements Item {
     private Processador processador;

@@ -1,4 +1,4 @@
-package EX5;
+package Atividade5.EX5;
 
 import java.util.ArrayList;
 public class Agenda {

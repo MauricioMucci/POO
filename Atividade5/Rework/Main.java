@@ -1,4 +1,4 @@
-package EX6dif;
+package Atividade5.Rework;
 
 public class Main {
     public static void main(String[] args) {

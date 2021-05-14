@@ -1,3 +1,5 @@
+package Atividade5;
+
 public class Teste {
     public static void main(String[] args) {
         Inteiro i = new Inteiro(1);

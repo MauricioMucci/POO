@@ -1,4 +1,4 @@
-package EX5;
+package Atividade5.EX5;
 
 public class Contato {
     private String nome;

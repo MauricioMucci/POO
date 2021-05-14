@@ -1,3 +1,5 @@
+package Atividade5;
+
 public class Racional extends Inteiro{
     int b;
     Racional (int x, int y) {
