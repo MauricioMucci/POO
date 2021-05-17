@@ -7,8 +7,9 @@ public class SistemaBanco {
     public static void main(String[] args) {
         Scanner scanf = new Scanner(System.in);
 
-        int escolha = 0, codigo = 0;
         String nome;
+        int escolha = 0, codigo = 0;
+        Conta dono = new Conta();
         Banco banco = new Banco("Itau");
 
         do {
@@ -48,12 +49,16 @@ public class SistemaBanco {
                     try {
                         System.out.print("\nQual o numero da conta?\nR: ");
                             codigo = scanf.nextInt();
-                            scanf.nextLine();
-
-                        Conta dono = banco.procuraConta(codigo);
+                    } catch (InputMismatchException e) {
+                        System.out.println("\nErro: O valor digitado não corresponde a um número.\n");
+                    } finally {
+                        scanf.nextLine();
+                    }
+                    try {
+                        dono = banco.procuraConta(codigo);
                         do {
                             int valor;
-                            
+                                
                             System.out.println("\n--------------------------------");
                             System.out.println(dono.toString());
                             System.out.println("--------------------------------");
@@ -72,7 +77,7 @@ public class SistemaBanco {
                                 scanf.nextLine();
                             }
                             switch (escolha) {
-                                case 1:
+                                  case 1:
                                     System.out.print("\nQual o valor?\nR: ");
                                         valor = scanf.nextInt();
                                         scanf.nextLine();
@@ -89,11 +94,17 @@ public class SistemaBanco {
                                     }
                                     break;
                                 case 3:
-                                    System.out.print("\nQual o valor?\nR: ");
-                                        valor = scanf.nextInt();
-                                    System.out.print("\nQual o codigo da conta a transferir?\nR: ");
-                                        codigo = scanf.nextInt();
+                                    valor = 0;
+                                    try {
+                                        System.out.print("\nQual o valor?\nR: ");
+                                            valor = scanf.nextInt();
+                                        System.out.print("\nQual o codigo da conta a transferir?\nR: ");
+                                            codigo = scanf.nextInt();
+                                    } catch (InputMismatchException e) {
+                                        System.out.println("\nErro: O valor digitado não corresponde a um número.\n");
+                                    } finally {
                                         scanf.nextLine();
+                                    }
                                     try {
                                         dono.transfere(valor, banco.procuraConta(codigo));    
                                     } catch (ContaInexistente e) {
